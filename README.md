@@ -87,6 +87,7 @@ Content:
 
 	In data, 'rep' and 'gen' denote repetition and generation number of the simulation, 'pop1.0' and 'pop2.0' the total population size of the non-segmented and segmented viruses, and 'k1.0' and 'k2.0' the mean mutational load of non-segmented and segmented viruses.
 	When the data contain information for every host, the host number is identified by the number after the dot. For example 'pop1.4' denote population size of the non-segmented virus in host 4.
+	
 	In histogram data, number after p denote virus type (1 for non-segmented and 0 for segmented) and k denote mutational load. For example 'p1k20' denote number of non-segmented viruses with 20 mutations. 
 	
 
