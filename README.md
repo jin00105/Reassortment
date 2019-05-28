@@ -17,10 +17,8 @@ Content:
 		segmented and non-segmented viruses to compete with each other. They don't have to
 		compete if you set the parameter 'N1r' to 1 or 0.
 		comp model has 3 different versions.
-		ver 1 is a prototype, and practically useless. I first made the model with python so it has .py and .c (comp1.1)
-		ver 2 has flexible population size with carrying capacity K (comp1.2). The latest one 1.2.3 is only logically sound and work fine with commandx.py 
-		ver 3 is a WF model with constant population (comp1.3). 1.3 will only work perfectly. 1.3.2 is garbage now and 1.3.3 is iffy.
-		comp2.3 and comp3.3 adds 3 segments and 8 segments respectively but needs a lot more work to run fine.
+		ver 2 has flexible population size with carrying capacity K (comp1.2.3).
+		ver 3 is a WF model with constant population (comp1.3).
 
 		b) how to run
 		same as running meta model.
@@ -55,6 +53,7 @@ Content:
 
 
 		B) how to run
+		
 		meta model has more easy and convenient method of running the simulation.
 		Instead of making multiple commands for different parameter sets in command*.py, here we use a csv file called 'paraminfo.csv' to store all the 
 		different parameter combinations. Each row contains a combination of parameters that is used for a simulation that is described on the first column, 'description'. 
@@ -80,9 +79,13 @@ Content:
 	All data is stored in Reassortment/data/(destination parameter value).
 	Each simulation data is stored in a .csv file.
 	There are several ways one can record the simulation data.
+
 	-krecord=0 records mean mutational load, whereas krecord=1 records minimum mutational load in the population. krecord=2 records distributional data over mutational load.
+
 	-with timestep=1, every population information is recorded every generation and only every repetition with timestep=0.
+
 	-with SHORTCSV 1, only total population size and mutational load is recorded, and with SHORTCSV 0, every deme's population size and mutational load is also recorded.
+
 	-with EACHSTEPREC 1, data is recorded every step of the simulation.
 
 	In data, 'rep' and 'gen' denote repetition and generation number of the simulation, 'pop1.0' and 'pop2.0' the total population size of the non-segmented and segmented viruses, and 'k1.0' and 'k2.0' the mean mutational load of non-segmented and segmented viruses.
