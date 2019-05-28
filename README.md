@@ -66,9 +66,9 @@ Content:
 		-set pop2initlen and pop1initlen to 0. Its just used for parsing in the c file.
 
 		-pop2init and pop1init has to have a number between 0 and 1 followed by '\~'sign. Each '(number)\~' is whatever segment's initial frequency at a host.
-		For example with hostnum=3, pop2init= '0.5~0.4~0.3~', pop1init= '0.5~0.6~0.7~', the three demes are initialized with 0.5, 0.4, and 0.3 of their population with segmented viruses and 0.5, 0.6, and 0.7 with non-segmented viruses. Ideally, the proportion of each type of viruses in a deme should not exceed 1.
-		As the number of hosts increases, there's a way to abbreviate the pop#init parameter value. Putting a number after a colon followed by'(proportion)~ ' is equivalent to writing '(proportion)~' the stated number of times. For example '3:1~2:0.2~' is equivalent to '1~1~1~0.2~0.2~'
-		Another thing to note is that is a user writes fewer '(proportion)~' than the amount of hosts, the rest of the host that didn't get specified gets '0~'. For example, when hostnum=3 and pop2init='2:1~', then the last host is automatically assigned with '0~'
+		For example with hostnum=3, pop2init= '0.5\~0.4\~0.3\~', pop1init= '0.5\~0.6\~0.7\~', the three demes are initialized with 0.5, 0.4, and 0.3 of their population with segmented viruses and 0.5, 0.6, and 0.7 with non-segmented viruses. Ideally, the proportion of each type of viruses in a deme should not exceed 1.
+		As the number of hosts increases, there's a way to abbreviate the pop#init parameter value. Putting a number after a colon followed by'(proportion)~ ' is equivalent to writing '(proportion)\~' the stated number of times. For example '3:1\~2:0.2\~' is equivalent to '1\~1\~1\~0.2\~0.2\~'
+		Another thing to note is that is a user writes fewer '(proportion)~' than the amount of hosts, the rest of the host that didn't get specified gets '0\~'. For example, when hostnum=3 and pop2init='2:1\~', then the last host is automatically assigned with '0\~'
 
 		-if you want random seed, type 'random'. If you need a consistent random number, put any negative integer below -9223372036854775808.
 		To run, simply type:
