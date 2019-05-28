@@ -7,8 +7,11 @@ Content:
 
 
 1. running simulations 
+
 	There's 2 types of models: comp and meta
+	
 	1) comp model
+
 		a) explanation
 		comp model is a single population model where you can simulate 
 		segmented and non-segmented viruses to compete with each other. They don't have to
