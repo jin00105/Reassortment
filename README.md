@@ -1,8 +1,9 @@
 Guide lines on using the virus competition model:
 
-1. running simulations
-2. data storage
-3. data analysis
+Content:
+	1. running simulations
+	2. data storage
+	3. data analysis
 
 
 1. running simulations 
@@ -16,7 +17,6 @@ Guide lines on using the virus competition model:
 		ver 1 is a prototype, and practically useless. I first made the model with python so it has .py and .c (comp1.1)
 		ver 2 has flexible population size with carrying capacity K (comp1.2). The latest one 1.2.3 is only logically sound and work fine with commandx.py 
 		ver 3 is a WF model with constant population (comp1.3). 1.3 will only work perfectly. 1.3.2 is garbage now and 1.3.3 is iffy.
-
 		comp2.3 and comp3.3 adds 3 segments and 8 segments respectively but needs a lot more work to run fine.
 
 		b) how to run
