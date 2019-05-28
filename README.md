@@ -75,22 +75,7 @@ Guide lines on using the virus competition model:
 	
 
 3. data analysis.
-	a) multihost.R
-		For plotting the mean mutational load and population size, use multihost.R
-	b) heatmap.R
-		For generating heatmaps, use heatmap.R
-	d) data_viewer2.ipynb
-		For plotting total mutational load and population size for both types of viruses and plotting histograms of mutation load in certain reps and generations, use data_viewer2.ipynb using Jupyter notebook.
-
-
-
-
-
-	In ./data, there's 2 .ipynb jupyter notebook file named data_viewer and data_viewer2. 
-	data_viewer has analysis of data from comp model and data_viewer2 has that of meta model.
-	data_viewer model is more messy and you'll likely have to finegle around to get it working.
-	data_viewer2 is more refined and you have to specify some parameters in the cell and the wanted result will show up.
-	Follow the instructions in the notebook.
+	For plotting total mutational load and population size for both types of viruses and plotting histograms of mutation load in certain reps and generations, use data_viewer2.ipynb using Jupyter notebook.
 
 
 
