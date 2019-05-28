@@ -36,22 +36,22 @@ Content:
 
 		The model consists of 4 or 5 steps and a recording step:
 
-			a) mutation:
-				In this step, viruses in each class (class denote a set of virus with equal amount of deleterious mutations in each segments)
-				goes through mutation according to the set mutation rate.
+		a) mutation:
+			In this step, viruses in each class (class denote a set of virus with equal amount of deleterious mutations in each segments)
+			goes through mutation according to the set mutation rate.
 
-			b) reassortment:
-				In this step, segmented virus goes through reassortment process, where their two segments get mixed up.
+		b) reassortment:
+			In this step, segmented virus goes through reassortment process, where their two segments get mixed up.
 
-			c) repoduction:
-				Viruses reproduce reflecting their fitness determined by their mutational load (amount of mutation they have) and the carrying capacity of a deme.
+		c) repoduction:
+			Viruses reproduce reflecting their fitness determined by their mutational load (amount of mutation they have) and the carrying capacity of a deme.
 
-			d) migration:
-				Viruses migrate among the hosts dependent on the set migration and transmission rate. Some proportion of viruses from each deme
-				migrate to the pool, and they get equally redistributed to every deme in proportion of transmission rate.
+		d) migration:
+			Viruses migrate among the hosts dependent on the set migration and transmission rate. Some proportion of viruses from each deme
+			migrate to the pool, and they get equally redistributed to every deme in proportion of transmission rate.
 
-			e) evolution:
-				This step is optional depending on whether the user wants to run the simulation where segmented population is present from the start or run the simulation with the segmented population occuring from non-segmented viruses after some number of generation. When the parameter value of 'e' is above zero, the latter mode is activated and the evolution step is run in the simulation. In this step, some number of non-segmented viruses is turned into the segmented viruses in proportion to e.
+		e) evolution:
+			This step is optional depending on whether the user wants to run the simulation where segmented population is present from the start or run the simulation with the segmented population occuring from non-segmented viruses after some number of generation. When the parameter value of 'e' is above zero, the latter mode is activated and the evolution step is run in the simulation. In this step, some number of non-segmented viruses is turned into the segmented viruses in proportion to e.
 
 
 		B) how to run
@@ -65,9 +65,9 @@ Content:
 		
 			-set pop2initlen and pop1initlen to 0. Its just used for parsing in the c file.
 			-pop2init and pop1init has to have a number between 0 and 1 followed by '~'sign. Each '(number)~' is whatever segment's initial frequency at a host.
-				For example with hostnum=3, pop2init= '0.5~0.4~0.3~', pop1init= '0.5~0.6~0.7~', the three demes are initialized with 0.5, 0.4, and 0.3 of their population with segmented viruses and 0.5, 0.6, and 0.7 with non-segmented viruses. Ideally, the proportion of each type of viruses in a deme should not exceed 1.
-				As the number of hosts increases, there's a way to abbreviate the pop#init parameter value. Putting a number after a colon followed by'(proportion)~ ' is equivalent to writing '(proportion)~' the stated number of times. For example '3:1~2:0.2~' is equivalent to '1~1~1~0.2~0.2~'
-				Another thing to note is that is a user writes fewer '(proportion)~' than the amount of hosts, the rest of the host that didn't get specified gets '0~'. For example, when hostnum=3 and pop2init='2:1~', then the last host is automatically assigned with '0~'
+			For example with hostnum=3, pop2init= '0.5~0.4~0.3~', pop1init= '0.5~0.6~0.7~', the three demes are initialized with 0.5, 0.4, and 0.3 of their population with segmented viruses and 0.5, 0.6, and 0.7 with non-segmented viruses. Ideally, the proportion of each type of viruses in a deme should not exceed 1.
+			As the number of hosts increases, there's a way to abbreviate the pop#init parameter value. Putting a number after a colon followed by'(proportion)~ ' is equivalent to writing '(proportion)~' the stated number of times. For example '3:1~2:0.2~' is equivalent to '1~1~1~0.2~0.2~'
+			Another thing to note is that is a user writes fewer '(proportion)~' than the amount of hosts, the rest of the host that didn't get specified gets '0~'. For example, when hostnum=3 and pop2init='2:1~', then the last host is automatically assigned with '0~'
 			-if you want random seed, type 'random'. If you need a consistent random number, put any negative integer below -9223372036854775808.
 		To run, simply type:
 		```python command.py meta1.1.3.c (code)```
