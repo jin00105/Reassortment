@@ -9,7 +9,7 @@ Content:
 1. running simulations 
 
 	There's 2 types of models: comp and meta
-	
+
 	1) comp model
 
 		a) explanation
@@ -28,22 +28,28 @@ Content:
 		```python command.py comp(version).c (code)``` 
 
 	2) meta model
+
 		A) explanation
 		More detailed explanation of the model is described in the Yoon2019.docx
 		meta model is a multi metapopulation model where you can simulate the competition between segmented and non-segmented viruses in multiple demes.
 		Each step, the viruses can migrate to the migration pool and transmit to other hosts with some transmission rate. 
-		
+
 		The model consists of 4 or 5 steps and a recording step:
+
 			a) mutation:
 				In this step, viruses in each class (class denote a set of virus with equal amount of deleterious mutations in each segments)
 				goes through mutation according to the set mutation rate.
+
 			b) reassortment:
 				In this step, segmented virus goes through reassortment process, where their two segments get mixed up.
+
 			c) repoduction:
 				Viruses reproduce reflecting their fitness determined by their mutational load (amount of mutation they have) and the carrying capacity of a deme.
+
 			d) migration:
 				Viruses migrate among the hosts dependent on the set migration and transmission rate. Some proportion of viruses from each deme
 				migrate to the pool, and they get equally redistributed to every deme in proportion of transmission rate.
+
 			e) evolution:
 				This step is optional depending on whether the user wants to run the simulation where segmented population is present from the start or run the simulation with the segmented population occuring from non-segmented viruses after some number of generation. When the parameter value of 'e' is above zero, the latter mode is activated and the evolution step is run in the simulation. In this step, some number of non-segmented viruses is turned into the segmented viruses in proportion to e.
 
@@ -52,8 +58,11 @@ Content:
 		meta model has more easy and convenient method of running the simulation.
 		Instead of making multiple commands for different parameter sets in command*.py, here we use a csv file called 'paraminfo.csv' to store all the 
 		different parameter combinations. Each row contains a combination of parameters that is used for a simulation that is described on the first column, 'description'. 
+
 		To run the set of parameters on a row. You specify the code on a 'code' column for the row on shell command.
+
 		When making some parameters, theres are some rules to follow:
+		
 			-set pop2initlen and pop1initlen to 0. Its just used for parsing in the c file.
 			-pop2init and pop1init has to have a number between 0 and 1 followed by '~'sign. Each '(number)~' is whatever segment's initial frequency at a host.
 				For example with hostnum=3, pop2init= '0.5~0.4~0.3~', pop1init= '0.5~0.6~0.7~', the three demes are initialized with 0.5, 0.4, and 0.3 of their population with segmented viruses and 0.5, 0.6, and 0.7 with non-segmented viruses. Ideally, the proportion of each type of viruses in a deme should not exceed 1.
