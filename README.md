@@ -21,8 +21,8 @@ Content:
 		ver 3 is a WF model with constant population (comp1.3).
 
 		b) how to run
-		same as running meta model.
-		To run simply type: 
+		find the parameter set you want in 'cparaminfo.csv' and use its code to run the simulatoin.
+		To run, simply type: 
 		```python command.py comp(version).c (code)``` 
 
 	2) meta model
@@ -54,11 +54,12 @@ Content:
 
 		B) how to run
 		
-		meta model has more easy and convenient method of running the simulation.
-		Instead of making multiple commands for different parameter sets in command*.py, here we use a csv file called 'paraminfo.csv' to store all the 
+		Use a csv file called 'mparaminfo.csv' to store all the 
 		different parameter combinations. Each row contains a combination of parameters that is used for a simulation that is described on the first column, 'description'. 
 
-		To run the set of parameters on a row. You specify the code on a 'code' column for the row on shell command.
+		To run, type:
+
+		```python command.py meta1.1.3.c (code)``` 
 
 		When making some parameters, theres are some rules to follow:
 
@@ -97,25 +98,3 @@ Content:
 3. data analysis.
 
 	For plotting total mutational load and population size for both types of viruses and plotting histograms of mutation load in certain reps and generations, use data_viewer2.ipynb using Jupyter notebook.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
